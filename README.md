@@ -12,10 +12,11 @@ In multi-label recognition (MLR) tasks, images with comprehensive annotations ar
 <p align="center">
  <table class="tg">
   <tr>
-    <td class="tg-c3ow"><img src="./Figures/model.png" align="center" ></td>
+    <td class="tg-c3ow"><img src="./Figures/Model.png" align="center" ></td>
   </tr>
 </table>
 </p>
+
 
 
 ## Performance
