@@ -100,7 +100,6 @@ def _transform(n_px):
 
 
 def available_models() -> List[str]:
-    """Returns the names of available CLIP models"""
     return list(_MODELS.keys())
 
 
@@ -108,34 +107,7 @@ def load(name: str,
          device: Union[str, torch.device] = "cuda"
          if torch.cuda.is_available() else "cpu",
          jit=False):
-    """Load a CLIP model
-
-    Parameters
-    ----------
-    name : str
-        A model name listed by `clip.available_models()`, or the path to a model checkpoint containing the state_dict
-
-    device : Union[str, torch.device]
-        The device to put the loaded model
-
-    jit : bool
-        Whether to load the optimized JIT model or more hackable non-JIT model (default).
-
-    Returns
-    -------
-    model : torch.nn.Module
-        The CLIP model
-
-    preprocess : Callable[[PIL.Image], torch.Tensor]
-        A torchvision transform that converts a PIL image into a tensor that the returned model can take as its input
-    """
-    # if name in _MODELS:
-    #     model_path = _download(_MODELS[name])
-    # elif os.path.isfile(name):
-    #     model_path = name
-    # else:
-    #     raise RuntimeError(
-    #         f"Model {name} not found; available models = {available_models()}")
+    
     model_path = "./configs/RN50.pt"
     try:
         # loading JIT archive
@@ -221,24 +193,6 @@ def load(name: str,
 def tokenize(texts: Union[str, List[str]],
              context_length: int = 77,
              truncate: bool = False) -> torch.LongTensor:
-    """
-    Returns the tokenized representation of given input string(s)
-
-    Parameters
-    ----------
-    texts : Union[str, List[str]]
-        An input string or a list of input strings to tokenize
-
-    context_length : int
-        The context length to use; all CLIP models use 77 as the context length
-
-    truncate: bool
-        Whether to truncate the text in case its encoding is longer than the context length
-
-    Returns
-    -------
-    A two-dimensional tensor containing the resulting tokens, shape = [number of input strings, context_length]
-    """
     if isinstance(texts, str):
         texts = [texts]
 
