@@ -15,22 +15,28 @@ Official PyTorch Implementation of **SCINet**, from the following paper:
 </table>
 </p>
 
-
 ## 📦 Installation & Data Preparation
 
-
-## 🚀 Train and Test Examples
-`torch==1.11.0+cu113 torchvision==0.12.0+cu113`
-conda env create -n SCINet -f environment.yml
-
-conda activate SCINet
-
-other:
+### Installation
 ```bash
-pip install timm ftfy regex pycocotool
+pip install -r requirement.txt
 ```
 
-### train
+The `requirements.txt` file can be used to install the necessary packages into a virtual environment.
+
+**Other:**
+```bash
+conda env create -n SCINet -f environment.yml
+conda activate SCINet
+```
+
+### Data Preparation
+
+Donwload [data](https://www.autodl.com/console/public-data?page_size=10&page_index=1), and unzip.
+
+## 🚀 Train and Test Examples
+
+### train 
 ```bash
 python train.py --data voc2007
 ```
@@ -39,9 +45,6 @@ python train.py --data voc2007
 ```bash
 python train.py --data voc2007 -t -r 1
 ```
-
-## 💘 Acknowledgements
-
 
 ## 📎 Citation
 
@@ -53,6 +56,9 @@ year = {2025},  
 author = {Wu, Xin and Teng, Fei and Feng, Yue and Shi, Kaibo and Lin, Zhuosheng and Zhang, Ji and Wang, James}
 }
 ```
+
+## 💘 Acknowledgements
+Thank you for making your open-source code in this field available.
 
 ## 📬 Contact
 In case of any questions, bugs, suggestions or improvements, please feel free to drop me at xinwu5386@gmail.com or open an issue.
