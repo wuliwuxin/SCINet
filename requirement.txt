@@ -1,0 +1,4 @@
+timm==1.0.14
+ftfy==6.2.3
+regex==2024.11.6
+pycocotools==2.0.7
