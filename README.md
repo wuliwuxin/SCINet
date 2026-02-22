@@ -45,7 +45,7 @@ python train.py --data voc2007
 ```bash
 python train.py --data voc2007 -t -r 1
 ```
-
+Wu X, Teng F, Feng Y, et al. Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge[J]. IEEE Transactions on Multimedia, 2026.
 ## 📎 Citation
 
 If you find this project useful in your research, please consider citing our paper:
