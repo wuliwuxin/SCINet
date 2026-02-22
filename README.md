@@ -2,7 +2,7 @@
 
 Official PyTorch Implementation of **SCINet**, from the following paper:
 
-> Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge. IEEE Transactions on Multimedia 2025. (Under Review)
+> Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge. IEEE Transactions on Multimedia 2026.
 
 
 **Model**
@@ -50,10 +50,12 @@ python train.py --data voc2007 -t -r 1
 
 If you find this project useful in your research, please consider citing our paper:
 ```
-@article{WU2025,  
-title = {Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge},  
-year = {2025},  
-author = {Wu, Xin and Teng, Fei and Feng, Yue and Shi, Kaibo and Lin, Zhuosheng and Zhang, Ji and Wang, James}
+@article{WU2026,  
+  title = {Exploring Partial Multi-Label Learning via Integrating Semantic Co-occurrence Knowledge},
+  author = {Wu, Xin and Teng, Fei and Feng, Yue and Shi, Kaibo and Lin, Zhuosheng and Zhang, Ji and Wang, James},
+  journal={IEEE Transactions on Multimedia},
+  year={2026},
+  publisher={IEEE}
 }
 ```
 
